@@ -42,4 +42,4 @@ El programa está dividido en funciones que encapsulan cada gesto o postura. Alg
 
 ## 📹 Video de la ejecución del programa
 
-- 
+- Mira la [demostración en video](https://youtu.be/zzAa6k6IlxM) para ver a NAO en acción.
