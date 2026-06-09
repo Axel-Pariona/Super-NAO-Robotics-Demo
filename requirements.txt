@@ -1,0 +1,2 @@
+# NAOqi SDK is required externally.
+# This project was developed for Python 2.7 and NAOqi.

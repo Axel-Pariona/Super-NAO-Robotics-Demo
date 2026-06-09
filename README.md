@@ -1,45 +1,156 @@
-# Super NAO - Defensa Personal con robótica educativa
+# Super NAO Robotics Demo
 
-Este proyecto utiliza al robot humanoide **NAO** como herramienta educativa para enseñar movimientos básicos de defensa personal a niños y jóvenes. A través de una combinación de gestos físicos y mensajes hablados, NAO busca concientizar sobre la importancia del autocuidado y la preparación ante situaciones de riesgo, en respuesta al contexto de creciente inseguridad en Lima.
+Super NAO Robotics Demo es un proyecto académico de robótica educativa desarrollado con el robot humanoide **NAO**. El proyecto utiliza movimientos corporales, posturas simbólicas y mensajes hablados para presentar una demostración sobre prevención, autocuidado y seguridad personal.
 
-## 🎯 Objetivo
+La demostración fue implementada en Python mediante el SDK **NAOqi**, sincronizando gestos del robot con frases educativas.
 
-Programar al robot NAO para ejecutar una presentación interactiva con movimientos y discurso educativo que promueva la prevención y la autodefensa en entornos escolares y sociales.
+## Objetivo
 
-## 🤖 Descripción del Proyecto
+Programar al robot NAO para ejecutar una presentación educativa breve, combinando voz, gestos y posturas corporales con el fin de promover mensajes de prevención y autocuidado en un entorno académico.
 
-El robot ha sido programado para:
+## Descripción del proyecto
 
-- Realizar gestos simbólicos como postura de defensa, ataques controlados, postura tipo superhéroe y postura en T.
-- Sincronizar los movimientos con frases pregrabadas que refuerzan el mensaje educativo.
-- Simular una pequeña clase de defensa personal a través de un guion dinámico y visual.
+El robot NAO realiza una secuencia de acciones como:
 
-## 🛠️ Tecnologías y herramientas utilizadas
+- Presentación inicial mediante voz.
+- Gestos expresivos sincronizados con el discurso.
+- Postura preventiva con los brazos.
+- Movimiento simbólico y controlado de brazos.
+- Gesto final tipo superhéroe.
+- Postura final en forma de T.
 
-- **Lenguaje:** Python 2.7
-- **SDK:** NAOqi SDK
-- **Entorno de desarrollo:** Visual Studio Code
-- **Simulación previa:** Choregraphe
-- **Robot físico:** NAO V5 (SoftBank Robotics)
+El proyecto no busca enseñar técnicas de combate, sino demostrar el uso de robótica humanoide como recurso educativo para comunicar mensajes de seguridad personal.
 
-## 📁 Estructura del código
+## Tecnologías utilizadas
 
-El programa está dividido en funciones que encapsulan cada gesto o postura. Algunas de ellas son:
+- Python 2.7
+- NAOqi SDK
+- Robot NAO V5
+- Choregraphe
+- Visual Studio Code
 
-- `defensa_personal_brazos()`: postura defensiva.
-- `gesto_ambos_brazos_ataque()`: golpes simulados con ambos brazos.
-- `gesto_superman_brazo_izquierdo()`: postura inspiradora estilo superhéroe.
-- `t_pose()`: postura final en forma de "T".
-- `gesture_emphasis()`, `gesture_point_right()`, `gesture_open_arms()`: gestos expresivos sincronizados con el discurso.
+## Estructura del proyecto
 
-## ▶️ Ejecución del programa
+```txt
+Super-NAO-Robotics-Demo/
+  src/
+    super_nao_demo.py
 
-1. Asegúrate de tener instalado el SDK NAOqi en tu entorno con Python 2.7.
-2. Conecta tu PC a la misma red que el robot NAO o usa el simulador.
-3. Establece la IP del robot en el archivo Python:
-   NAO_IP = "192.168.xxx.xxx"
-   PORT = 9559
+  docs/
+    script.md
 
-## 📹 Video de la ejecución del programa
+  media/
+    README.md
 
-- Mira la [demostración en video](https://youtu.be/zzAa6k6IlxM) para ver a NAO en acción.
+  .gitignore
+  README.md
+  requirements.txt
+```
+
+## Archivos principales
+
+### `src/super_nao_demo.py`
+
+Contiene el programa principal. Se encarga de:
+
+- Conectarse al robot NAO mediante NAOqi.
+- Inicializar los módulos de voz, movimiento y postura.
+- Ejecutar la secuencia de gestos.
+- Sincronizar movimientos con frases habladas.
+
+### `docs/script.md`
+
+Contiene el guion hablado por NAO durante la demostración.
+
+### `media/README.md`
+
+Contiene el enlace al video de demostración y recomendaciones para recursos multimedia.
+
+## Configuración
+
+El proyecto requiere tener instalado el SDK de NAOqi y acceso a un robot NAO físico o simulador compatible.
+
+Configurar la IP y el puerto mediante variables de entorno.
+
+En Linux o macOS:
+
+```bash
+export NAO_IP="192.168.xxx.xxx"
+export NAO_PORT="9559"
+```
+
+En Windows PowerShell:
+
+```powershell
+$env:NAO_IP="192.168.xxx.xxx"
+$env:NAO_PORT="9559"
+```
+
+También se puede editar directamente el archivo `src/super_nao_demo.py` en caso de pruebas locales.
+
+## Ejecución
+
+Ejecutar el programa principal:
+
+```bash
+python src/super_nao_demo.py
+```
+
+El proyecto fue desarrollado para un entorno con **Python 2.7** y **NAOqi SDK**.
+
+## Video de demostración
+
+La siguiente demostración muestra al robot NAO ejecutando la secuencia de voz, gestos y posturas programadas para el proyecto.
+
+[![Ver demostración en YouTube](https://img.youtube.com/vi/zzAa6k6IlxM/maxresdefault.jpg)](https://youtu.be/zzAa6k6IlxM)
+
+## Funciones principales
+
+El programa está organizado en funciones que representan gestos o acciones del robot:
+
+- `reset_postura_neutral()`: coloca al robot en una postura neutral.
+- `postura_preventiva_brazos()`: ejecuta una postura preventiva simbólica.
+- `gesto_movimiento_controlado()`: realiza un movimiento controlado de brazos.
+- `gesto_superman_brazo_izquierdo()`: ejecuta un gesto final tipo superhéroe.
+- `t_pose()`: coloca al robot en una postura final en forma de T.
+- `gesture_emphasis()`: gesto de énfasis durante el discurso.
+- `gesture_point_right()`: gesto de señalamiento.
+- `gesture_open_arms()`: gesto de apertura de brazos.
+
+## Alcance del proyecto
+
+Este proyecto corresponde a una demostración académica de robótica educativa.
+
+Incluye:
+
+- Conexión con NAO mediante NAOqi.
+- Control básico de articulaciones.
+- Uso de texto a voz.
+- Secuencia de gestos sincronizados.
+- Presentación educativa guiada.
+
+## Limitaciones
+
+- Requiere robot NAO físico o simulador compatible.
+- Requiere SDK NAOqi.
+- Fue desarrollado para Python 2.7.
+- No incluye interfaz gráfica.
+- No implementa visión por computadora ni reconocimiento de voz.
+- Los movimientos son simbólicos y controlados.
+
+## Posibles mejoras
+
+- Agregar interacción mediante reconocimiento de voz.
+- Integrar sensores táctiles del robot.
+- Implementar una secuencia configurable desde archivo externo.
+- Agregar más gestos expresivos.
+- Crear una versión compatible con Python 3 si el entorno lo permite.
+- Documentar capturas o fotografías del proceso de prueba.
+
+## Estado del proyecto
+
+Proyecto académico funcional desarrollado como demostración de robótica educativa con NAO.
+
+## Autor
+
+Desarrollado por Axel Pariona como proyecto académico de Inteligencia Artificial y robótica educativa.
