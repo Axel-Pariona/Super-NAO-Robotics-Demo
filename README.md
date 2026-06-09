@@ -104,6 +104,8 @@ La siguiente demostración muestra al robot NAO ejecutando la secuencia de voz, 
 
 [![Ver demostración en YouTube](https://img.youtube.com/vi/zzAa6k6IlxM/maxresdefault.jpg)](https://youtu.be/zzAa6k6IlxM)
 
+Enlace directo: https://youtu.be/zzAa6k6IlxM
+
 ## Funciones principales
 
 El programa está organizado en funciones que representan gestos o acciones del robot:
